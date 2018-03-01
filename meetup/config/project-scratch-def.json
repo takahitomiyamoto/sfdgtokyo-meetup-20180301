@@ -1,0 +1,11 @@
+{
+    "orgName": "sfdgtokyo meetup",
+    "country": "US",
+    "edition": "Enterprise",
+    "description": "sfdgtokyo meetup",
+    "hasSampleData": true,
+    "language": "en_US",
+    "orgPreferences" : {
+        "enabled": ["S1DesktopEnabled"]
+    }
+}

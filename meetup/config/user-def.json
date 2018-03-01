@@ -1,0 +1,13 @@
+{
+    "Username": "admin@sfdx.org",
+    "FirstName": "Takahito",
+    "LastName": "Miyamoto",
+    "Email": "admin@sfdx.org",
+    "Alias": "admin",
+    "TimeZoneSidKey": "Asia/Tokyo",
+    "LocaleSidKey": "ja_JP",
+    "EmailEncodingKey": "UTF-8",
+    "LanguageLocaleKey": "en_US",
+    "profileName": "System Administrator",
+    "generatePassword": true
+}

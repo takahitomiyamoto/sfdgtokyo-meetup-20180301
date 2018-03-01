@@ -1,0 +1,171 @@
+<aura:component controller="SS_NewComponentListController" implements="flexipage:availableForAllPageTypes" access="global">
+  <!-- lightning:formattedTime -->
+  <aura:attribute name="now"              type="String" default="12:34:56.789Z"/>
+  <!-- lightning:carousel -->
+  <aura:attribute name="prefixContentURL" type="String" default="/sfc/servlet.shepherd/version/download/"/>
+  <aura:attribute name="contents"         type="List"   default="[]"/>
+  <!-- lightning:pillContainer -->
+  <aura:attribute name="items" type="List" default="[
+    {label: 'My Pill',     name: 'mypill', href: 'www.trailhead.com'},
+    {label: 'Avatar Pill', name: 'avatarpill',  type: 'avatar', src: '/sample', fallbackIconName: 'standard:user',  variant: 'circle', alternativeText: 'User avatar'},
+    {label: 'Avatar Pill', name: 'avatarpill2', type: 'avatar', src: '/sample', fallbackIconName: 'custom:custom1', variant: 'square', alternativeText: 'User avatar2'},
+    {label: 'Icon Pill',   name: 'iconpill',    type: 'icon',                           iconName: 'utility:animal_and_nature',         alternativeText: 'Icon Pill'}
+  ]"/>
+  <!-- lightning:treeGrid -->
+  <aura:attribute name="gridColumns"      type="List" />
+  <aura:attribute name="gridData"         type="Object" />
+  <aura:attribute name="gridExpandedRows" type="Object" />
+  <aura:attribute name="gridSelectedRows" type="Object" />
+
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <div class="slds-grid">
+    <div class="slds-col slds-size_3-of-4 slds-grid slds-grid_vertical">
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:listView">
+          <lightning:listView aura:id="contact_listview"
+            enableInlineEdit="true"
+            listName="AllContacts"
+            objectApiName="Contact"
+            rows="5"
+            showActionBar="true"
+            showRowLevelActions="true"
+          />
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:treeGrid">
+          <lightning:treeGrid aura:id="treeGrid"
+            columns="{!v.gridColumns}"
+            data="{!v.gridData}"
+            keyField="Id"
+            title="lightning:treeGrid"
+          />
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightningsnapin:prechatAPI">
+            <center>sorry, this is under construction...</center>
+        </lightning:card>
+      </div>
+    </div>
+    <div class="slds-col slds-size_1-of-4 slds-grid slds-grid_vertical">
+      <div class="slds-col" >
+        <lightning:card iconName="standard:bot" title="lightning:carousel">
+          <lightning:carousel aura:id="contents_carousel" class="the_carousel" disableAutoRefresh="false" disableAutoScroll="false" scrollDuration="5" title="carousel">
+            <lightning:carouselImage
+              src="{!v.prefixContentURL + v.contents[0]}"
+              header="First card"
+              description="First card description"
+              alternativeText="This is a card"
+            />
+            <lightning:carouselImage
+              src="{!v.prefixContentURL + v.contents[1]}"
+              header="Second card"
+              description="Second card description"
+              alternativeText="This is a card"
+            />
+            <lightning:carouselImage
+              src="{!v.prefixContentURL + v.contents[2]}"
+              header="Third card"
+              description="Third card description"
+              alternativeText="This is a card"
+            />
+          </lightning:carousel>
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:formattedAddress">
+          <!-- Memo: titleに設定した文字列がマウスオーバーしても表示されない -->
+          <lightning:formattedAddress aura:id="acn_formattedAddress"
+            street="三田1-4-1 住友不動産麻布十番ビル"
+            city="港区"
+            province="東京都"
+            country="日本"
+            postalCode="108-0073"
+            title="Accenture Innovation Hub Tokyo"
+          />
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:formattedName">
+          <!-- Memo: localを日本語にすると、スペースが消える -->
+          <lightning:formattedName aura:id="taka_formattedName"
+            class=""
+            firstName="Takahito"
+            format="long"
+            informalName="Taka"
+            lastName="Miyamoto"
+            middleName="(^ー^)"
+            salutation="Mr."
+            suffix="san"
+            title="Takahito Miyamoto"
+          />
+          <span>&nbsp;<b>← long</b></span>
+          <br />
+          <lightning:formattedName aura:id="taka_formattedName"
+            class=""
+            firstName="Takahito"
+            format="medium"
+            informalName="Taka"
+            lastName="Miyamoto"
+            middleName="(^ー^)"
+            salutation="Mr."
+            suffix="san"
+            title="Takahito Miyamoto"
+          />
+          <span>&nbsp;<b>← medium</b></span>
+          <br />
+          <lightning:formattedName aura:id="taka_formattedName"
+            class=""
+            firstName="Takahito"
+            format="short"
+            informalName="Taka"
+            lastName="Miyamoto"
+            middleName="(^ー^)"
+            salutation="Mr."
+            suffix="san"
+            title="Takahito Miyamoto"
+          />
+          <span>&nbsp;<b>← short</b></span>
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:formattedTime">
+          <lightning:formattedTime aura:id="now_formattedTime"
+            class=""
+            title="{!v.now}"
+            value="{!v.now}"
+          />
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:pillContainer">
+          <!-- Memo: singleLine="false"なのに改行されない -->
+          <!-- <lightning:pillContainer aura:id="sample_pillContainer"
+            items="{!v.items}"
+            label="Sample pill container"
+            onitemremove="{!c.handleItemRemove}"
+            singleLine="false"
+            title="Sample pill container"
+          /> -->
+          <lightning:pillContainer aura:id="sample_pillContainer"
+            items="{!v.items}"
+            label="Sample pill container"
+            onitemremove="{!c.handleItemRemove}"
+            title="Sample pill container"
+          />
+        </lightning:card>
+      </div>
+    </div>
+  </div>
+  <div class="slds-grid">
+  </div>
+  <div class="slds-grid">
+    <div class="slds-col slds-size_1-of-4" >
+    </div>
+    <div class="slds-col slds-size_1-of-4" >
+    </div>
+  </div>
+</aura:component>

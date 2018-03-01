@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#DE730F</headerColor>
+        <logo>X2</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Large</formFactors>
+    <label>Custom Surveys</label>
+    <navType>Standard</navType>
+    <tabs>Custom_Surveys</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Custom_Surveys_UtilityBar</utilityBar>
+</CustomApplication>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created by Lightning App Builder</description>
+    <flexiPage>SS_Custom_Surveys</flexiPage>
+    <label>Custom Surveys</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom54: Boat</motif>
+</CustomTab>

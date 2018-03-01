@@ -1,0 +1,19 @@
+{
+    "packageDirectories": [
+        {
+            "path": "Common",
+            "default": true
+        },
+        {
+            "path": "NewComponentList",
+            "default": false
+        },
+        {
+            "path": "CustomSurveys",
+            "default": false
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "42.0"
+}

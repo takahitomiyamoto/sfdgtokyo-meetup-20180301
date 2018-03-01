@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>X1</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>New Lightning Component List</description>
+    <formFactors>Large</formFactors>
+    <label>New Component List</label>
+    <navType>Standard</navType>
+    <tabs>New_Component_List</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>New_Component_List_UtilityBar</utilityBar>
+</CustomApplication>
