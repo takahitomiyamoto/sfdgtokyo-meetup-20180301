@@ -3,23 +3,54 @@
   <aura:attribute name="contents" type="List" default="['0680k000000GzSJ','0680k000000GzRp','0680k000000GzST','0680k000000GzSO']"/>
 
   <div class="slds-grid">
-    <div class="slds-col slds-size_1-of-1">
-      <lightning:card iconName="standard:bot" title="lightning:inputAddress">
-        <lightning:inputAddress aura:id="inputAddress"
-          addressLabel="Address"
-          streetLabel="Street"
-          cityLabel="City"
-          countryLabel="Country"
-          provinceLabel="State"
-          postalCodeLabel="PostalCode"
-          street="1 Market St. "
-          city="San Francisco"
-          country="US"
-          province="CA"
-          postalCode="94105"
-          required="true"
-        />
-      </lightning:card>
+    <div class="slds-col slds-size_1-of-1 slds-grid slds-grid_vertical">
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:inputAddress">
+          <lightning:inputAddress aura:id="inputAddress"
+            addressLabel="Address"
+            streetLabel="Street"
+            cityLabel="City"
+            countryLabel="Country"
+            provinceLabel="State"
+            postalCodeLabel="PostalCode"
+            street="1 Market St. "
+            city="San Francisco"
+            country="US"
+            province="CA"
+            postalCode="94105"
+            required="true"
+          />
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:recordEditForm">
+          <lightning:recordEditForm aura:id="recordEditForm" objectApiName="Contact">
+            <lightning:messages />
+            <lightning:inputField fieldName="Name" />
+            <lightning:button class="slds-m-top_small" type="submit" label="Create new" />
+          </lightning:recordEditForm>
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:inputField">
+          <center>sorry, this is under construction...</center>
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:inputName">
+          <center>sorry, this is under construction...</center>
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:input">
+          <center>sorry, this is under construction...</center>
+        </lightning:card>
+      </div>
+      <div class="slds-col">
+        <lightning:card iconName="standard:bot" title="lightning:inputRichText">
+          <center>sorry, this is under construction...</center>
+        </lightning:card>
+      </div>
     </div>
   </div>
 </aura:component>

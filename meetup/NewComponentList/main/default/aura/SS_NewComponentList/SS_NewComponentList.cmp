@@ -46,7 +46,7 @@
       </div>
       <div class="slds-col">
         <lightning:card iconName="standard:bot" title="lightningsnapin:prechatAPI">
-            <center>sorry, this is under construction...</center>
+          <center>sorry, this is under construction...</center>
         </lightning:card>
       </div>
     </div>
