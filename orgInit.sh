@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo リポジトリを clone します
-git clone https://github.com/takahitomiyamoto/sfdgtokyo-meetup-20180301.git
-
 echo meetup へ移動します
 cd meetup
 
