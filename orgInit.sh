@@ -17,7 +17,6 @@ sfdx force:source:push
 
 echo 権限セットを割り当てます
 sfdx force:user:permset:assign -n SS_New_Component_List
-sfdx force:user:permset:assign -n SS_Custom_Surveys
 
 echo scratch org へアクセスします
 sfdx force:org:open -p lightning/n/SS_New_Component_List
