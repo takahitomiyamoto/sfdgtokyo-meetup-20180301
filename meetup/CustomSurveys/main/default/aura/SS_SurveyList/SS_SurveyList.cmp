@@ -3,14 +3,22 @@
   <aura:attribute name="contents" type="List" default="['0680k000000GzSJ','0680k000000GzRp','0680k000000GzST','0680k000000GzSO']"/>
 
   <div class="slds-grid">
-    <div class="slds-col slds-size_2-of-3">
-      <lightning:card title="">
-        Hello
-      </lightning:card>
-    </div>
-    <div class="slds-col slds-size_1-of-3" >
-      <lightning:card title="">
-        World
+    <div class="slds-col slds-size_1-of-1">
+      <lightning:card iconName="standard:bot" title="lightning:inputAddress">
+        <lightning:inputAddress aura:id="inputAddress"
+          addressLabel="Address"
+          streetLabel="Street"
+          cityLabel="City"
+          countryLabel="Country"
+          provinceLabel="State"
+          postalCodeLabel="PostalCode"
+          street="1 Market St. "
+          city="San Francisco"
+          country="US"
+          province="CA"
+          postalCode="94105"
+          required="true"
+        />
       </lightning:card>
     </div>
   </div>
