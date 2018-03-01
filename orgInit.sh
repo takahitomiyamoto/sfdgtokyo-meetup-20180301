@@ -9,8 +9,8 @@ sfdx force:org:create -s -f config/project-scratch-def.json -a feature01
 echo org の一覧を表示します
 sfdx force:org:list
 
-echo ユーザを作成します
-sfdx force:user:create -n admin-user -f config/user-def.json
+# echo ユーザを作成します
+# sfdx force:user:create -a admin-user -f config/user-def.json
 
 echo ソースコードを push します
 sfdx force:source:push

@@ -4,13 +4,13 @@
         <headerColor>#0070D2</headerColor>
         <logo>X1</logo>
         <logoVersion>1</logoVersion>
-        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
     <description>New Lightning Component List</description>
     <formFactors>Large</formFactors>
     <label>New Component List</label>
     <navType>Standard</navType>
-    <tabs>New_Component_List</tabs>
+    <tabs>SS_New_Component_List</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>New_Component_List_UtilityBar</utilityBar>
+    <utilityBar>SS_New_Component_List_UtilityBar</utilityBar>
 </CustomApplication>

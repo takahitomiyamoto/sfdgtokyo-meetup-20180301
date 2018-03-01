@@ -10,11 +10,11 @@
     </classAccesses>
     <custom>true</custom>
     <tabVisibilities>
-        <tab>Custom_Surveys</tab>
+        <tab>SS_Custom_Surveys</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>New_Component_List</tab>
+        <tab>SS_New_Component_List</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>High Volume Customer Portal</userLicense>

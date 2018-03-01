@@ -6,10 +6,11 @@
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
+    <description>Custom Surveys</description>
     <formFactors>Large</formFactors>
     <label>Custom Surveys</label>
     <navType>Standard</navType>
-    <tabs>Custom_Surveys</tabs>
+    <tabs>SS_Custom_Surveys</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>Custom_Surveys_UtilityBar</utilityBar>
+    <utilityBar>SS_Custom_Surveys_UtilityBar</utilityBar>
 </CustomApplication>

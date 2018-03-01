@@ -1,5 +1,7 @@
 # meetup-20180301
-    orgInit.sh を実行する。
+    git clone https://github.com/takahitomiyamoto/sfdgtokyo-meetup-20180301.git
+    cd sfdgtokyo-meetup-20180301/
+    ./orgInit.sh
 
 ## memo
 ### 設定を変更してもPulled Sourceが「No results found」となるコンフィグ
